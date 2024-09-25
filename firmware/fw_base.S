@@ -52,7 +52,11 @@ _start:
 	call	fw_boot_hart
 	add	a6, a0, zero
 	MOV_3R	a0, s0, a1, s1, a2, s2
+<<<<<<< HEAD
 	#li	a7, -1
+=======
+	# li	a7, -1
+>>>>>>> main
 	csrr a7, mhartid
 	beq	a6, a7, _try_lottery
 	/* Jump to relocation wait loop if we are not boot hart */
